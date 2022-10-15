@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: order-service-app
-        image: dailycodebuffer/orderservice
+        image: IMAGE_URL/orderservice
         imagePullPolicy: Always
         ports:
         - containerPort: 8082
