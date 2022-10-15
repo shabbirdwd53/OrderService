@@ -26,5 +26,5 @@ spring:
             issuer-uri: https://dev-15585796.okta.com/oauth2/default
 
 microservice:
-  product: http://product-service-svc/product/
-  payment: http://payment-service-svc/payment/
+  product: http://localhost:8081/product/
+  payment: http://localhost:8081/payment/

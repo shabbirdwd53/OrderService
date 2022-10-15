@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TestServiceInstanceListSupplier
-implements ServiceInstanceListSupplier {
+        implements ServiceInstanceListSupplier {
 
     @Override
     public String getServiceId() {
@@ -18,23 +18,20 @@ implements ServiceInstanceListSupplier {
 
     @Override
     public Flux<List<ServiceInstance>> get() {
-        List<ServiceInstance> result
-                = new ArrayList<>();
+        List<ServiceInstance> result = new ArrayList<>();
         result.add(new DefaultServiceInstance(
                 "payment-service-svc",
                 "payment-service-svc",
                 "localhost",
-                8080,
-                false
-        ));
+                8081,
+                false));
 
         result.add(new DefaultServiceInstance(
                 "product-service-svc",
                 "product-service-svc",
                 "localhost",
-                8080,
-                false
-        ));
+                8081,
+                false));
 
         return Flux.just(result);
     }
